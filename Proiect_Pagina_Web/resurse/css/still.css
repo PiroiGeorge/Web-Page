@@ -1,0 +1,242 @@
+﻿/* Gstil general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #005a87;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*  meniu de navigare */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #005a87;
+}
+
+    nav ul li {
+        position: relative;
+    }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+            nav ul li a:hover,
+            nav ul li:hover > a {
+                background-color: #007baa;
+            }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+/* Footer stil */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+    footer small, footer address {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+        footer address p, footer small {
+            margin: 0;
+        }
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+        nav ul li {
+            text-align: center;
+        }
+
+    footer {
+        flex-direction: column;
+    }
+
+        footer small, footer address {
+            flex-direction: column;
+            align-items: center;
+        }
+}
+
+/* Additional Page Elements */
+main {
+    padding: 20px;
+}
+
+figure {
+    max-width: 80%; /*  latime */
+    margin: 20px auto; /*spatiu si centarre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efect umbra */
+    border-radius: 8px; /*  margini rotunde */
+    overflow: hidden; /* margini imagini rotunjite */
+    background-color: #f9f9f9; /* fundal */
+}
+
+    figure img {
+        width: 100%; /* imagien se mareste */
+        height: auto; /* mentine proprietatile */
+        transition: transform 0.5s ease; /* tranzitie zoom */
+    }
+
+    figure:hover img {
+        transform: scale(1.05); /* mareste imaginea pentru mouse */
+    }
+
+figcaption {
+    padding: 10px; /* spatiu text */
+    text-align: center; /* centraza */
+    background-color: #eee; /* fundal */
+    font-style: italic; /* stil italic */
+    font-size: 1.1em; /* mareste fontul */
+}
+
+a[href="https://www.google.co.uk/"] {
+    display: inline-block; /*  marginii */
+    padding: 12px 24px; /* spatiu în jurul textului */
+    margin: 20px 0; /* spatiu deasupra si sub */
+    background-color: #4285F4; /* fundal albastru */
+    color: white; /* text alb */
+    border-radius: 4px; /* matgini rotundete */
+    text-decoration: none; /* elimina subliniere */
+    font-weight: bold; /* text ingrosat */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* umbre */
+    transition: background-color 0.3s, transform 0.2s; /* tranzitie pentru mouse */
+    text-align: center; /* text centrat */
+}
+
+    a[href="https://www.google.co.uk/"]:hover {
+        background-color: #357AE8; /* schimba culoare fundal */
+        transform: scale(1.05); /* mareste link */
+    }
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* centrare orizontala */
+    align-items: center; /* centrare verticala */
+    height: 10vh; /* inaltime */
+}
+
+a[href$="imag4_mare.jpg"] {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 20px 0;
+    background-color: #4285F4; /* culoare fundal */
+    color: white; /* culoare text */
+    border-radius: 5px; /* margini rotunjite  */
+    text-decoration: none; /* elimina subliniere */
+    font-weight: bold; /* text ingrosat */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* tranzitie mouse */
+}
+
+    a[href$="imag4_mare.jpg"]:hover, a[href$="imag4_mare.jpg"]:focus {
+        background-color: #357AE8; /* culoare fundal pt mouse  */
+        transform: scale(1.05); /* efect zoom */
+        color: #ffffff; /* schimbare culoare text */
+    }
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* centrare orizontala */
+    align-items: center; /* centarre verticala */
+    height: 10vh; /* inaltime */
+}
+
+
+.taburi-iframe a {
+    display: inline-block;
+    align-items: center; 
+    margin: 10px;
+    text-decoration: none;
+    background-color: #005a87;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+    .taburi-iframe a:hover {
+        background-color: #007baa;
+    }
+
+.taburi-iframe iframe {
+    width: 100%;
+    border: none;
+    margin-top: 20px;
+}
+
+.taburi-iframe iframe {
+    width: 560px; /* latime videoi */
+    height: 315px; /* inaltime video */
+    margin: 20px auto; /* centrare video */
+    display: block; 
+}
+
+@media screen and (max-width: 580px) {
+    .taburi-iframe iframe {
+        width: 100%; /* video pentru ecrane mici */
+        height: auto; /* inaltime */
+    }
+}
+
+iframe {
+    border: 0; /* elimina bordura video */
+}
+
+
+section, article, aside {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #005a87;
+}
