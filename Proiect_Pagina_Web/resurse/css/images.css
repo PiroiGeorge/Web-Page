@@ -1,0 +1,49 @@
+﻿:root {
+    --image-max-width: 100%; 
+    --image-min-width: 150px; 
+}
+
+figure {
+    max-width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--background-soft);
+}
+
+    figure img {
+        width: var(--image-max-width);
+        min-width: var(--image-min-width); /*  imaginile nu devin prea mici */
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    figure:hover img {
+        transform: scale(1.05);
+    }
+
+figcaption {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--background-tertiary);
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/*  ajustarea dimensiunilor imaginii pe ecrane mici */
+@media (max-width: 768px) {
+    figure {
+        max-width: 90%; 
+    }
+
+        figure img {
+            min-width: var(--image-min-width); 
+        }
+}
+
+@media (max-width: 480px) {
+    figure {
+        max-width: 100%; 
+    }
+}
